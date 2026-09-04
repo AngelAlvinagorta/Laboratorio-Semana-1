@@ -2,12 +2,12 @@ def res_enrutamiento():
     # Número de rutas
     n = int(input().strip())
     rutas = []
+
     
     for _ in range(n):
         linea = input().strip().split()
-        # linea[0] es el path ("/user/:id")
-        # linea[1] es el contenido base ("UserPage")
-        rutas.append((linea[0], linea[1]))
+        rutas.append((linea[0], linea[1]))  # linea[0] es el path ("/user/:id")
+                                            # linea[1] es el contenido base ("UserPage")
         
     # Número de transiciones
     m = int(input().strip())
@@ -38,7 +38,7 @@ def res_enrutamiento():
                 if coincide:
                     encontrado = True
                     if parametros:
-                        # Añade los parámetros después del contenido, separados por espacio
+                        # Añade los parámetros después del contenido
                         print(f"{contenido} {' '.join(parametros)}")
                     else:
                         print(contenido)
@@ -47,6 +47,9 @@ def res_enrutamiento():
         # Luego revisar las rutas y ninguna coincide
         if not encontrado:
             print("404 Not Found")
+
+# Comando para ejecutar "powershell"
+# Get-Content entradaP1.txt | python Problema1.py
 
 if __name__ == '__main__':
     res_enrutamiento()
