@@ -50,7 +50,7 @@ def res_banco():
                         
         print(f"{p} {mejor_cliente}")
 
-# Comando para ejecutar 
+# Comando para ejecutar "powershell"
 # Get-Content entradaP2.txt | python Problema2.py
 
 if __name__ == '__main__':

@@ -28,7 +28,7 @@ def res_enrutamiento():
                 # Comparando segmentos
                 for r, t in zip(ruta_partes, trans_partes):
                     if r.startswith(':'):
-                        # Es un parámetro si el segmento de la ruta empieza con :
+                        # Es un parámetro si el segmento de la ruta empieza con ':'
                         parametros.append(t)
                     elif r != t:
                         # Se descarta esta ruta
